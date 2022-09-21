@@ -6,3 +6,15 @@ exec('pwd', (err, stdout, stderr) => {
   if (stderr) return console.log('stdError', stderr)
   console.log('stdout', stdout)
 })
+
+exec('/usr/bin/env python3 index.py', (err, stdout, stderr) => {
+  if (err) return console.log('Error', err)
+  if (stderr) return console.log('stdError', stderr)
+  console.log('stdout', stdout)
+})
+
+exec('node execFile.js', (err, stdout, stderr) => {
+  if (err) return console.log('Error', err)
+  if (stderr) return console.log('stdError', stderr)
+  console.log('stdout', stdout)
+})
